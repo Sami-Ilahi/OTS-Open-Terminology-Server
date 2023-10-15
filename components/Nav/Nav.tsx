@@ -37,7 +37,7 @@ const Nav = () => {
                 <line x1='6' y1='6' x2='18' y2='18' />
               </svg>
             </div>
-            <span className='absolute w-11/12 h-20 top-5  right-20 border-b border-primary pb-3  flex justify-center items-center'>
+            <span className='absolute w-full h-20 top-5 pl-6  border-b border-primary pb-3  flex justify-left items-center'>
               <Logo />
             </span>
             <ul className='flex flex-col items-center justify-between min-h-[250px] text-base overflow-hidden'>
