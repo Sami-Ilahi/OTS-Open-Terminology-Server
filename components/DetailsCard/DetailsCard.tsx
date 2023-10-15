@@ -21,16 +21,16 @@ const DetailsCard = () => {
   return (
     <>
       {isObjEmpty(detailsCard) ? (
-        <div className='block w-11/12  rounded-lg bg-white text-left shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700'>
+        <div className='block w-11/12  rounded-lg bg-white text-left shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]'>
           <div className='relative overflow-x-auto p-5'>
-            <table className='table-fixed w-full text-sm text-left text-gray-500 dark:text-gray-400 border'>
+            <table className='table-fixed w-full text-sm text-left text-gray-500  border'>
               <tbody>
                 {detailsNames.map((name, i: number) => {
                   if (name !== "Synonyms") {
                     return (
                       <tr
                         key={i}
-                        className='bg-white border-2 border-gray-100 dark:bg-gray-800 dark:border-gray-700'
+                        className='bg-white border-2 border-gray-100 '
                       >
                         <td className='xl:p-5 md:p-1 p-2 border-2 border-gray-100 font-semibold text-gray-700 xl:text-[90%] text-[78%]'>
                           {name}
@@ -44,14 +44,14 @@ const DetailsCard = () => {
                     return (
                       <tr
                         key={i}
-                        className='bg-white border-2 border-gray-100 dark:bg-gray-800 dark:border-gray-700'
+                        className='bg-white border-2 border-gray-100 '
                       >
                         <td className='xl:p-5 md:p-1 p-2 border-2 border-gray-100 text-gray-700 font-semibold xl:text-[90%] text-[78%]'>
                           {name}
                         </td>
                         {detailsCard[name].length ? (
                           <td className='border-2 border-gray-100 md:p-1 p-2 flex flex-wrap'>
-                            <ul className='max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400'>
+                            <ul className='max-w-md space-y-1 text-gray-500 list-disc list-inside '>
                               {detailsCard[name].map(
                                 (item: string, j: number) => (
                                   <li

@@ -2,26 +2,26 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Logo } from "..";
+import { Logo, Button } from "..";
 
 const Nav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
- 
+
   return (
     <div className='flex items-center justify-between  py-8'>
       <nav>
         <section className='flex lg:hidden'>
           <div
-            className='space-y-2'
+            className='space-y-2 absolute top-9'
             onClick={() => setIsNavOpen(prev => !prev)}
           >
             <span className='block h-0.5 w-8 animate-pulse bg-black'></span>
             <span className='block h-0.5 w-8 animate-pulse bg-black'></span>
             <span className='block h-0.5 w-8 animate-pulse bg-black'></span>
           </div>
-          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+          <div className={isNavOpen ? "showMenuNav " : "hidden"}>
             <div
-              className='absolute top-2 right-0 px-8 py-8'
+              className='absolute top-1 right-0 px-8 py-8 z-20'
               onClick={() => setIsNavOpen(false)}
             >
               <svg
@@ -37,10 +37,10 @@ const Nav = () => {
                 <line x1='6' y1='6' x2='18' y2='18' />
               </svg>
             </div>
-            <div className='absolute w-11/12 h-20 top-7 right-32 border-b border-primary pb-3  flex justify-center items-center'>
+            <span className='absolute w-11/12 h-20 top-5  right-20 border-b border-primary pb-3  flex justify-center items-center'>
               <Logo />
-            </div>
-            <ul className='flex flex-col items-center justify-between min-h-[250px] text-base'>
+            </span>
+            <ul className='flex flex-col items-center justify-between min-h-[250px] text-base overflow-hidden'>
               <li className='hover:border-b-2 hover:border-gray-700 my-8 capitalize'>
                 <Link href='https://www.openterminologyserver.com/'>Home</Link>
               </li>
@@ -60,17 +60,13 @@ const Nav = () => {
                 </Link>
               </li>
               <li className='hover:border-b-2 hover:border-gray-700 my-8 capitalize'>
-                <Link
-                  href='https://www.openterminologyserver.com/contact/'
-                  className='hidden xl:block'
-                >
+                <Link href='https://www.openterminologyserver.com/contact/'>
                   contact
                 </Link>
               </li>
             </ul>
           </div>
         </section>
-
         <nav className='hidden space-x-8 lg:flex'>
           <ul className='hidden lg:flex items-center justify-between gap-12 text-base text-black capitalize list-none'>
             <li>
@@ -119,13 +115,11 @@ const Nav = () => {
       z-index: 10;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: center;
       align-items: center;
     }
   `}</style>
     </div>
-
-    
   );
 };
 

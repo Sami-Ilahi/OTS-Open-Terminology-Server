@@ -22,7 +22,7 @@ const ResultCard = ({ title, text, dataObject }: Props) => {
   return (
     <div
       onClick={handleClick}
-      className='block w-11/12 rounded-lg bg-white text-left my-4 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700  hover:scale-105 transition duration-500'
+      className='block w-11/12 rounded-lg bg-white text-left my-4 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]   hover:scale-105 transition duration-500'
     >
       <div className='flex justify-between p-4'>
         <div>

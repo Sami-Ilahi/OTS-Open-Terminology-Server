@@ -6,6 +6,11 @@ This is a [Next.js](https://nextjs.org/), Typescript, and Taillwind CSS project 
 
 This documentation provides a detailed guide on how to use and understand the features and functionalities of the Live Search App. This web application allows users to perform live searches on a server and provides various filtering, sorting, and display options. The app is responsive and user-friendly, making it suitable for a wide range of screen sizes.
 
+## Demo
+Click here for a live demo: [`ots-live-search`](https://ots-live-search.vercel.app/).
+
+
+
 ## Table of Contents
 
 1. [Getting Started](#getting-started)
@@ -24,9 +29,9 @@ To start using Live Search App, you should have Node.js and npm (Node Package Ma
 1. Clone the project from the repository.
 
 ```bash
-   git clone https://github.com/Sami-Ilahi/
+   git clone https://github.com/Sami-Ilahi/OTS-Open-Terminology-Server
 
-   cd livesearch-app
+   cd OTS-Open-Terminology-Server
 ```
 
 First, run to install dependencies.
