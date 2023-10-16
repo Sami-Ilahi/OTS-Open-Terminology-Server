@@ -58,20 +58,23 @@ const SearchContainer = () => {
   };
   /* Fetch data */
   useEffect(() => {
-    axios(config)
-      .then(response => {
-        // Handle the response
-        setFetchedData(response.data);
-        setIsLoading(false);
-        if (search && selected && !response.data.length) {
-          setNoDataMsg(noDataFoundMsg);
-        }
-      })
-      .catch(error => {
-        // Handle any errors
-        console.error(error);
-        setIsLoading(false);
-      });
+    if (search !== "") {
+      axios(config)
+        .then(response => {
+          // Handle the response
+          setFetchedData(response.data);
+          setIsLoading(false);
+          if (search && selected && !response.data.length) {
+            setNoDataMsg(noDataFoundMsg);
+          }
+        })
+        .catch(error => {
+          // Handle any errors
+          console.error(error);
+          setIsLoading(false);
+        });
+    }
+
     // cancel the debounce
     debouncedResults.cancel();
   }, [selected, search]);
@@ -95,9 +98,9 @@ const SearchContainer = () => {
       setDetailsCard({});
     } else {
       setIsValidSearch(true);
-      setSearch(value);
       setIsLoading(true);
     }
+    setSearch(value);
   };
 
   /* handle Radio buttons */
