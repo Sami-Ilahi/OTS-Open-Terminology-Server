@@ -85,7 +85,8 @@ const SearchContainer = () => {
 
   /* handle searchBar */
   const searchOnChangeHandler = (e: any) => {
-    let value = e.target.value;
+    let value = e.target.value.trim();
+
     if (value.length <= 3) {
       setIsValidSearch(false);
       setIsLoading(false);
